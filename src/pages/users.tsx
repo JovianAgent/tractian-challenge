@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Outlet } from "react-router-dom";
 import UsersProvider, { UsersContext } from "../contexts/usersProvider";
 
 function Users() {
@@ -12,6 +13,7 @@ function Users() {
             Users
           </p>
         </header>
+        <Outlet />
       </div>
     );
   }

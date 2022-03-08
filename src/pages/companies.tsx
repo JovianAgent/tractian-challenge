@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Outlet } from "react-router-dom";
 import CompaniesProvider, { CompaniesContext } from "../contexts/companiesProvider";
 
 function Companies() {
@@ -12,6 +13,7 @@ function Companies() {
             Companies
           </p>
         </header>
+        <Outlet />
       </div>
     );
   }

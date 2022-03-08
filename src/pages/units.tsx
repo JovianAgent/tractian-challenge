@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Outlet } from "react-router-dom";
 import UnitsProvider, { UnitsContext } from "../contexts/unitsProvider";
 
 function Units() {
@@ -12,6 +13,7 @@ function Units() {
             Units
           </p>
         </header>
+        <Outlet />
       </div>
     );
   }

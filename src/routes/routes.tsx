@@ -6,31 +6,59 @@ import { useRoutes } from 'react-router-dom'
 
 const Main = lazy(async () => await import('../pages/main'))
 const Assets = lazy(async () => await import('../pages/assets'))
+const AssetList = lazy(async () => await import('../pages/assetList'))
 const Users = lazy(async () => await import('../pages/users'))
+const UserList = lazy(async () => await import('../pages/userList'))
 const Units = lazy(async () => await import('../pages/units'))
+const UnitList = lazy(async () => await import('../pages/unitList'))
 const Companies = lazy(async () => await import('../pages/companies'))
+const CompanyList = lazy(async () => await import('../pages/companyList'))
 
 export const routes: RouteObject[] = [
     {
-        path: '/',
-        element: <Main />,
-        caseSensitive: true,
+      path: '/',
+      element: <Main />,
+      caseSensitive: true,
       children: [
         {
           path: 'assets',
-          element: <Assets />
+          element: <Assets />,
+          children: [
+            {
+              path: '',
+              element: <AssetList />
+            }
+          ]
         },
         {
           path: 'users',
-          element: <Users />
+          element: <Users />,
+          children: [
+            {
+              path: '',
+              element: <UserList />
+            }
+          ]
         },
         {
           path: 'units',
-          element: <Units />
+          element: <Units />,
+          children: [
+            {
+              path: '',
+              element: <UnitList />
+            }
+          ]
         },
         {
           path: 'companies',
-          element: <Companies />
+          element: <Companies />,
+          children: [
+            {
+              path: '',
+              element: <CompanyList />
+            }
+          ]
         }
       ]
     }

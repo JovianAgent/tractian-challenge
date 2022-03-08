@@ -1,22 +1,24 @@
 export type Asset = {
   asset: {	
-    id:	number
+    id: number
     sensors: string[]
-    model:	string
-    status:	string
-    healthscore:	number
-    name:	string
-    image:	string
+    model: string
+    status: string
+    healthscore: number
+    name: string
+    image: string
     specifications: {
-      maxTemp:	number
+      rpm?: number
+      maxTemp: number
+      power?: number
     }
     metrics: {
-      totalCollectsUptime:	number
-      totalUptime:	number
-      lastUptimeAt:	Date
+      totalCollectsUptime: number
+      totalUptime: number
+      lastUptimeAt: Date
     }	
-    unitId:	number
-    companyId:	number
+    unitId: number
+    companyId: number
   };
 };
 
@@ -27,11 +29,11 @@ export type AssetList = {
 
 export type User = {
   User: {	
-    id:	number
+    id: number
     email: string
-    name:	string
-    unitId:	number
-    companyId:	number
+    name: string
+    unitId: number
+    companyId: number
   };
 };
 
@@ -42,9 +44,9 @@ export type UserList = {
 
 export type Unit = {
   unit: {	
-    id:	number
-    name:	string
-    companyId:	number
+    id: number
+    name: string
+    companyId: number
   };
 };
 
@@ -55,8 +57,8 @@ export type UnitList = {
 
 export type Company = {
   company: {	
-    id:	number
-    name:	string
+    id: number
+    name: string
   };
 };
 
