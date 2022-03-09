@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktractian_challenge=self.webpackChunktractian_challenge||[]).push([[930],{8930:function(e,a,c){c.r(a);c(2791);var n=c(184);a.default=function(){return(0,n.jsx)("div",{className:"App",children:(0,n.jsx)("header",{className:"App-header",children:(0,n.jsx)("p",{children:"Welcome"})})})}}}]);
+//# sourceMappingURL=930.550f3ad3.chunk.js.map
