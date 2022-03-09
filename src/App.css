@@ -49,6 +49,10 @@
   margin-top: 15px !important
 }
 
+.assetImage {
+  margin-top: 15px
+}
+
 .status-inAlert {
   color: red
 }

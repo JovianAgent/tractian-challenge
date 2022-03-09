@@ -103,7 +103,7 @@ function AssetList() {
                 </span>
               </p>
               <p>Model: {asset.model}</p>
-              <p>Last Up Time: {getDate(asset.metrics.lastUptimeAt)}</p>
+              <p>Last Uptime: {getDate(asset.metrics.lastUptimeAt)}</p>
             </Card>
           ))}
         </Col>

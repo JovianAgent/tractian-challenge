@@ -8,6 +8,7 @@ const Main = lazy(async () => await import('../pages/main'))
 const Welcome = lazy(async () => await import('../pages/welcome'))
 const Assets = lazy(async () => await import('../pages/assets'))
 const AssetList = lazy(async () => await import('../pages/assetList'))
+const Asset = lazy(async () => await import('../pages/asset'))
 const Users = lazy(async () => await import('../pages/users'))
 const UserList = lazy(async () => await import('../pages/userList'))
 const Units = lazy(async () => await import('../pages/units'))
@@ -32,6 +33,10 @@ export const routes: RouteObject[] = [
             {
               path: '',
               element: <AssetList />
+            },
+            {
+              path: ':id',
+              element: <Asset />
             }
           ]
         },
