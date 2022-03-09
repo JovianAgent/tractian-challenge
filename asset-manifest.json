@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tractian-challenge/static/css/main.ef76ee11.css",
-    "main.js": "/tractian-challenge/static/js/main.e096e025.js",
+    "main.js": "/tractian-challenge/static/js/main.cbb9dd4c.js",
     "static/js/736.ed3ccce4.chunk.js": "/tractian-challenge/static/js/736.ed3ccce4.chunk.js",
     "static/js/787.92a186d1.chunk.js": "/tractian-challenge/static/js/787.92a186d1.chunk.js",
     "static/js/416.28baf377.chunk.js": "/tractian-challenge/static/js/416.28baf377.chunk.js",
@@ -26,7 +26,7 @@
     "static/media/Logo-Tractian.svg": "/tractian-challenge/static/media/Logo-Tractian.a30908b8a350ec063f930e7c738f1f43.svg",
     "index.html": "/tractian-challenge/index.html",
     "main.ef76ee11.css.map": "/tractian-challenge/static/css/main.ef76ee11.css.map",
-    "main.e096e025.js.map": "/tractian-challenge/static/js/main.e096e025.js.map",
+    "main.cbb9dd4c.js.map": "/tractian-challenge/static/js/main.cbb9dd4c.js.map",
     "736.ed3ccce4.chunk.js.map": "/tractian-challenge/static/js/736.ed3ccce4.chunk.js.map",
     "787.92a186d1.chunk.js.map": "/tractian-challenge/static/js/787.92a186d1.chunk.js.map",
     "416.28baf377.chunk.js.map": "/tractian-challenge/static/js/416.28baf377.chunk.js.map",
@@ -51,6 +51,6 @@
   },
   "entrypoints": [
     "static/css/main.ef76ee11.css",
-    "static/js/main.e096e025.js"
+    "static/js/main.cbb9dd4c.js"
   ]
 }
