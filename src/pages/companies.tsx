@@ -1,18 +1,23 @@
 import React, { useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import CompaniesProvider, { CompaniesContext } from "../contexts/companiesProvider";
+import 'antd/dist/antd.css';
+import '../App.css';
+import { PageHeader } from 'antd';
 
 function Companies() {
   const { companyList, addCompany } = useContext(CompaniesContext);
-  console.log(companyList)
+
+  const navigate = useNavigate()
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Companies
-          </p>
-        </header>
+      <div>
+        <PageHeader
+          className="site-page-header"
+          onBack={() => navigate('')}
+          title={"Companias"}
+          subTitle={companyList.length + " companias"}
+        />
         <Outlet />
       </div>
     );

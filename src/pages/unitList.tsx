@@ -1,17 +1,22 @@
 import React, { useContext } from "react";
 import { UnitsContext } from "../contexts/unitsProvider";
+import 'antd/dist/antd.css';
+import '../App.css';
+import { Card } from 'antd';
+import { Unit } from "../types";
 
 function UnitList() {
   const { unitList, addUnit } = useContext(UnitsContext);
-  console.log(unitList)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Units List {unitList.length}
-        </p>
-      </header>
+    <div className="list-holder">
+      {unitList.map((unit: Unit) => (
+        <Card
+          title={unit.name}
+          className='card'
+        >
+        </Card>
+      ))}
     </div>
   );
 }

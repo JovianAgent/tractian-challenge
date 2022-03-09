@@ -5,6 +5,7 @@ import { useRoutes } from 'react-router-dom'
 
 
 const Main = lazy(async () => await import('../pages/main'))
+const Welcome = lazy(async () => await import('../pages/welcome'))
 const Assets = lazy(async () => await import('../pages/assets'))
 const AssetList = lazy(async () => await import('../pages/assetList'))
 const Users = lazy(async () => await import('../pages/users'))
@@ -20,6 +21,10 @@ export const routes: RouteObject[] = [
       element: <Main />,
       caseSensitive: true,
       children: [
+        {
+          path: '',
+          element: <Welcome />
+        },
         {
           path: 'assets',
           element: <Assets />,

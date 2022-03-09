@@ -1,17 +1,23 @@
 import React, { useContext } from "react";
 import { UsersContext } from "../contexts/usersProvider";
+import 'antd/dist/antd.css';
+import '../App.css';
+import { Card } from 'antd';
+import { User } from "../types";
 
 function UserList() {
   const { userList, addUser } = useContext(UsersContext);
-  console.log(userList)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Users List {userList.length}
-        </p>
-      </header>
+    <div className="list-holder">
+      {userList.map((user: User) => (
+        <Card
+          title={user.name}
+          className='card'
+        >
+          <p>email: {user.email}</p>
+        </Card>
+      ))}
     </div>
   );
 }

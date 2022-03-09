@@ -1,18 +1,23 @@
 import React, { useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import UnitsProvider, { UnitsContext } from "../contexts/unitsProvider";
+import 'antd/dist/antd.css';
+import '../App.css';
+import { PageHeader } from 'antd';
 
 function Units() {
   const { unitList, addUnit } = useContext(UnitsContext);
-  console.log(unitList)
+
+  const navigate = useNavigate()
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Units
-          </p>
-        </header>
+      <div>
+        <PageHeader
+          className="site-page-header"
+          onBack={() => navigate('')}
+          title={"Unidades"}
+          subTitle={unitList.length + " unidades"}
+        />
         <Outlet />
       </div>
     );

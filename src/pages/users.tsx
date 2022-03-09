@@ -1,18 +1,23 @@
 import React, { useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import UsersProvider, { UsersContext } from "../contexts/usersProvider";
+import 'antd/dist/antd.css';
+import '../App.css';
+import { PageHeader } from 'antd';
 
 function Users() {
   const { userList, addUser } = useContext(UsersContext);
-  console.log(userList)
+
+  const navigate = useNavigate()
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Users
-          </p>
-        </header>
+      <div>
+        <PageHeader
+          className="site-page-header"
+          onBack={() => navigate('')}
+          title={"Usuparios"}
+          subTitle={userList.length + " usuários"}
+        />
         <Outlet />
       </div>
     );
