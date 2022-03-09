@@ -7,7 +7,7 @@ const Router: React.FC = () => {
 
   return (
     <Suspense fallback={<div>carregando...</div>}>
-      <BrowserRouter>
+      <BrowserRouter basename="/tractian-challenge">
         <Routes />
       </BrowserRouter>
     </Suspense>
